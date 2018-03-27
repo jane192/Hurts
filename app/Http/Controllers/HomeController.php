@@ -7,17 +7,16 @@ use App\Http\Requests\ProductRequest;
 use App\Product;
 use App\Cabinet;
 use Auth;
+use App;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
+    public $hurts;
     public function __construct()
     {
         $this->middleware('auth');
+        $this->hurts = Cabinet::all();
     }
 
     /**
@@ -28,31 +27,61 @@ class HomeController extends Controller
     public function index()
 
     {
-        $hurts=Cabinet::all();
-        $products=Product::all();
+        $hurts=$this->hurts;
+        $products=Product::orderBy('id','DESC')->orderBy('id','DESC')->paginate(5);
         return view('home',compact('hurts','products'));
     }
     public function postIndex(ProductRequest $r){
-        if (!empty($_FILES['picture']['name'])){
-
-            dd($_FILES);
+        if (!empty($_FILES['picture1']['name'])){
 
 
+            $pic =\App::make('\App\Libs\Imag')->url($_FILES['picture1']['tmp_name']);
+
+
+            $r['picture']=$pic;
+
+        }else{
+            $pic='';
+            $r['picture']='';
         }
+
         $r['user_id']=Auth::user()->id;
         //unset($r['_token']);
-        $r['picture']='';
-        $r['status']='';
 
+        $r['status']='';
+        //dd($r->all());
         //dd($r->all());
         Product::create($r->all());
         return redirect('home');
 
     }
     public function getDelete($id=null){
-        Product::find($id)->delete();
+        $obj =  Product::find($id);
+
         //Product::where('id',$id)->delete(); или так
+        $pic =\App::make('\App\Libs\Imag')->picdel($obj->picture);
+        $obj ->delete();
         return redirect('/home');
     }
+    public function getEdit($id=null){
+        $obj= Product::find($id);
+        $hurts=$this->hurts;
+        return view('home.edit', compact('obj','hurts'));
 
+    }
+
+
+    public
+    function postEdit(ProductRequest $r, $id = null)
+    {
+
+        $obj = Product::find($id);
+        $obj->name = $r['name'];
+        $obj->price = $r['price'];
+        $obj->status = $r['status'];
+        $obj->product_code = $r['product_code'];
+        $obj->save();
+
+        return redirect('/home');
+    }
 }

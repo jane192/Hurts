@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('scripts')
     @parent
-    <script src="{{asset('js/delete.js')}}"></script>
+    <script src="{{asset('public/js/delete.js')}}"></script>
 @endsection
 @section('content')
 <div class="container">
@@ -45,7 +45,7 @@
                                 <label for="catalog_id">Каталог</label>
                             <select class="form-control" name="catalog_id" id="catalog_id">
                                 @foreach($hurts as $one)
-                                <option value="{{$one->id}}">{{$one->name}}</option>
+                                    <option value="{{$one->id}}">{{$one->name}}</option>
                                 @endforeach
                             </select>
                             </div>

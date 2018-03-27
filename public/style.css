@@ -11,7 +11,7 @@ body {
     background-image: url(images/fon2.jpg);
 }
 
-.header h1 {
+.head {
     color: white;
     padding: 20px 0 0 20px;
     margin: 0;
@@ -29,6 +29,161 @@ body {
 
 }
 
+.video inframe {
+    width: 100%;
+}
+
+.video li {
+    display: inline-block;
+
+
+}
+
+.video ul {
+    text-align: center;
+}
+
+.albom11 {
+    float: left;
+    margin-bottom: 50px;
+
+
+}
+
+.albom22 {
+    float: left;
+    margin-bottom: 50px;
+
+}
+
+.albom33 {
+    float: left;
+    margin-bottom: 50px;
+
+}
+
+.albom44 {
+    float: left;
+    margin-bottom: 50px;
+
+}
+
+#albom4 {
+    clear: both;
+    height: 650px;
+    padding-left: 30px;
+
+
+
+}
+
+#albom3 {
+    clear: both;
+    height: 850px;
+    padding-left: 30px;
+
+}
+
+#albom2 {
+    clear: both;
+    height: 550px;
+    padding-left: 30px;
+
+}
+
+#albom1 {
+    clear: both;
+    height: 650px;
+    padding-left: 30px;
+
+
+}
+
+.albom1,
+.albom2,
+.albom3,
+.albom4 {
+    color: #c61e6b;
+    text-decoration: none;
+    margin-top: 10px;
+
+
+}
+
+#albom1 li {
+    list-style: none;
+
+}
+
+#albom1 li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+#albom2 li {
+    list-style: none;
+
+}
+
+#albom2 li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+#albom3 li {
+    list-style: none;
+
+}
+
+#albom3 li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+#albom4 li {
+    list-style: none;
+
+}
+
+#albom4 li a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.ones {
+    width: 250px;
+    height: 250px;
+    float: left;
+
+
+}
+
+.two {
+    width: 250px;
+    height: 250px;
+    float: left;
+
+}
+
+.three {
+    width: 250px;
+    height: 250px;
+    float: left;
+
+}
+
+.four {
+    background-image: url(/images/photo4.jpg);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    float: left;
+
+}
 
 
 .facebook,
@@ -171,18 +326,21 @@ nav a:hover {
     width: 220px;
 
 }
-.error{
+
+.error {
     color: red;
     background: white;
     padding: 5px;
 }
-.form1{
+
+.form1 {
     width: 200px;
     height: 460px;
     margin-left: 20px;
     margin: auto;
 }
-.form3{
+
+.form3 {
     width: 400px;
     margin-left: 20px;
     margin: auto;
@@ -210,14 +368,17 @@ figure {
     color: #005775;
     margin-top: 20px;
 }
-.form2{
+
+.form2 {
     margin-left: 20px;
 }
-table{
-    border:solid 1px white;
+
+table {
+    border: solid 1px white;
 }
-td{
-    border:solid 1px white;
+
+td {
+    border: solid 1px white;
 
 }
 
@@ -227,7 +388,8 @@ td{
     width: 220px;
 
 }
-table{
+
+table {
     width: 220px;
 }
 
@@ -285,71 +447,82 @@ footer {
     text-decoration: none;
     border-radius: 5px;
 }
-.thank{
-    color:#770088;
+
+.thank {
+    color: #770088;
     font-size: 2em;
     text-align: center;
 
 }
+
 small {
     float: right;
     padding-bottom: 50px;
     color: white;
-}.form-control{
-    width: 100%;
- }
- .forma{
-     width: 200px;
- }
-   .modal-window{
-        position: absolute;
-        top:200px;
-        left:50%;
-        width:400px;
-       height: 400px;
-        margin-left:-200px;
-        padding: 10px;
-        border:solid 1px black;
-        box-shadow: 1px 1px 1px black;
-        background: white;
-        border-radius: 6px;
-        color:red;
-        font-size:18px;
-        
-    }
-    p >.left{
-    margin-left: 200px;
-    position:relative;
- 
 }
- .model-close-btn:hover{
-    text-decoration: none;}
-.model-close-btn{
+
+.form-control {
+    width: 100%;
+}
+
+.forma {
+    width: 200px;
+}
+
+.modal-window {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    padding: 10px;
+    border: solid 1px black;
+    box-shadow: 1px 1px 1px black;
+    background: white;
+    border-radius: 6px;
+    color: red;
+    font-size: 18px;
+
+}
+
+p > .left {
+    margin-left: 200px;
     position: relative;
-    top:2px;
-    left:320px;
+
+}
+
+.model-close-btn:hover {
+    text-decoration: none;
+}
+
+.model-close-btn {
+    position: relative;
+    top: 2px;
+    left: 320px;
     margin: 0;
     padding: 0;
     font-size: 30px;
-    
+
 }
-#overlay{
+
+#overlay {
     position: fixed;
     background: black;
     opacity: 0.7;
     height: 100%;
     width: 100%;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
-.modal-window:before{
-     position: relative;
-    content:"Закрыто";
-    top:-1px; 
-     left:320px;       
+.modal-window:before {
+    position: relative;
+    content: "Закрыто";
+    top: -1px;
+    left: 320px;
     font-size: 13px;
-        
+
 }
 
 @media all and (max-width: 768px) {
@@ -401,6 +574,6 @@ small {
         display: block;
         width: 90%;
     }
- 
+
 
 }

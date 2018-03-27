@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'locale' => 'ru',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,9 +169,13 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
 
+
         /*
          * Package Service Providers...
+         *
          */
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -182,6 +186,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        App\Providers\ViewServiceProvider::class,
 
     ],
 
