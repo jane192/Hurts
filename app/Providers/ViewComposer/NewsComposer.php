@@ -5,7 +5,7 @@ use App\News;
 
 Class NewsComposer{
     public function compose(View $view){
-        $compnews=News::all();
+        $compnews=News::orderBy('id','Desc')->limit(4)->get();
         $view->with('compnews',$compnews);
     }
     

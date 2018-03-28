@@ -39,6 +39,7 @@
             <a href="{{asset('music')}}">Песни</a>
             <a href="#">Тексты песен</a>
             <a href="{{asset('about')}}">О группе</a>
+            <a href="{{asset('products')}}">Продукты</a>
         </nav>
     </header>
 
