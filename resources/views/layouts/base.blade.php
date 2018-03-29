@@ -37,13 +37,13 @@
             <a href="{{asset('/')}}" class="active">Главная</a>
             <a href="{{asset('video')}}">Видео</a>
             <a href="{{asset('music')}}">Песни</a>
-            <a href="#">Тексты песен</a>
+            <a href="{{asset('songs')}}">Тексты песен</a>
             <a href="{{asset('about')}}">О группе</a>
             <a href="{{asset('products')}}">Продукты</a>
         </nav>
     </header>
 
-    @include ('templates.bread');
+    <!--    @include ('templates.bread')-->
     <main>
 
         <div class="center col-lg-10 ">

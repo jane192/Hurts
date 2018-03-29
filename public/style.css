@@ -257,6 +257,19 @@ nav a:hover {
     background-color: #005775;
 }
 
+.white {
+    color: white;
+    font-size: 20px;
+}
+
+.white:hover {
+    color: #9f9f7c;
+}
+
+.center {
+    text-align: center;
+}
+
 .center h2 {
     color: white;
     text-align: center;
