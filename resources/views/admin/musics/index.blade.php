@@ -1,8 +1,8 @@
 @extends('admin.layouts.master') @section('content')
 
-<p>{!! link_to_route(config('quickadmin.route').'.song.create', trans('quickadmin::templates.templates-view_index-add_new') , null, array('class' => 'btn btn-success')) !!}</p>
+<p>{!! link_to_route(config('quickadmin.route').'.music.create', trans('quickadmin::templates.templates-view_index-add_new') , null, array('class' => 'btn btn-success')) !!}</p>
 
-@if ($songs->count())
+@if ($musics->count())
 <div class="portlet box green">
     <div class="portlet-title">
         <div class="caption">{{ trans('quickadmin::templates.templates-view_index-list') }}</div>
@@ -15,23 +15,31 @@
                         {!! Form::checkbox('delete_all',1,false,['class' => 'mass']) !!}
                     </th>
                     <th>name</th>
-                    <th>albom</th>
+                    <th>picture</th>
+                    <th>music</th>
+                    <th>user_id</th>
+                    <th>cabinet_id</th>
+                    <th>status</th>
 
                     <th>&nbsp;</th>
                 </tr>
             </thead>
 
             <tbody>
-                @foreach ($songs as $row)
+                @foreach ($musics as $row)
                 <tr>
                     <td>
                         {!! Form::checkbox('del-'.$row->id,1,false,['class' => 'single','data-id'=> $row->id]) !!}
                     </td>
                     <td>{{ $row->name }}</td>
-                    <td>{{ $row->albom }}</td>
+                    <td>@if($row->picture != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->picture }}">@endif</td>
+                    <td>{{ $row->music }}</td>
+                    <td>{{ isset($row->user->email) ? $row->user->email: '' }}</td>
+                    <td>{{ $row->cabinet_id }}</td>
+                    <td>{{ $row->status }}</td>
 
                     <td>
-                        {!! link_to_route(config('quickadmin.route').'.song.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!} {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => "return confirm('".trans("quickadmin::templates.templates-view_index-are_you_sure")."');", 'route' => array(config('quickadmin.route').'.song.destroy', $row->id))) !!} {!! Form::submit(trans('quickadmin::templates.templates-view_index-delete'), array('class' => 'btn btn-xs btn-danger')) !!} {!! Form::close() !!}
+                        {!! link_to_route(config('quickadmin.route').'.music.edit', trans('quickadmin::templates.templates-view_index-edit'), array($row->id), array('class' => 'btn btn-xs btn-info')) !!} {!! Form::open(array('style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => "return confirm('".trans("quickadmin::templates.templates-view_index-are_you_sure")."');", 'route' => array(config('quickadmin.route').'.music.destroy', $row->id))) !!} {!! Form::submit(trans('quickadmin::templates.templates-view_index-delete'), array('class' => 'btn btn-xs btn-danger')) !!} {!! Form::close() !!}
                     </td>
                 </tr>
                 @endforeach
@@ -44,7 +52,7 @@
                     </button>
             </div>
         </div>
-        {!! Form::open(['route' => config('quickadmin.route').'.song.massDelete', 'method' => 'post', 'id' => 'massDelete']) !!}
+        {!! Form::open(['route' => config('quickadmin.route').'.music.massDelete', 'method' => 'post', 'id' => 'massDelete']) !!}
         <input type="hidden" id="send" name="toDelete"> {!! Form::close() !!}
     </div>
 </div>

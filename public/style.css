@@ -260,13 +260,19 @@ nav a:hover {
 .white {
     color: white;
     font-size: 20px;
+
+}
+
+.white a {
+    text-align: center;
+
 }
 
 .white:hover {
     color: #9f9f7c;
 }
 
-.center {
+.centerr {
     text-align: center;
 }
 

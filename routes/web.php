@@ -29,5 +29,6 @@ Route::get('home/edit/{id}','HomeController@getEdit')->where('id','[0-9]');
 Route::post('home/edit/{id}','HomeController@postEdit')->where('id','[0-9]');
 Route::get('/songs','SongController@getIndex');
 Route::get('/songs/{id}','SongController@getOne');
+Route::get('/music','MusicController@getIndex');
 Route::get('/products','ProductController@getIndex');
 Route::get('{id}', 'BaseController@getStatic');// Всегда ставится последним

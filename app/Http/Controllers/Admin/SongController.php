@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Redirect;
 use Schema;
-use App\Songs;
+use App\Song;
 use App\Http\Requests\CreateSongsRequest;
 use App\Http\Requests\UpdateSongsRequest;
 use Illuminate\Http\Request;
 
 
 
-class SongsController extends Controller {
+class SongController extends Controller {
 
 	/**
 	 * Display a listing of songs
@@ -23,7 +23,8 @@ class SongsController extends Controller {
 	 */
 	public function index(Request $request)
     {
-        $songs = Songs::all();
+        	   
+        $songs = Song::all();
 
 		return view('admin.songs.index', compact('songs'));
 	}
@@ -35,7 +36,7 @@ class SongsController extends Controller {
 	 */
 	public function create()
 	{
-	    
+
 	    
 	    return view('admin.songs.create');
 	}
@@ -48,9 +49,9 @@ class SongsController extends Controller {
 	public function store(CreateSongsRequest $request)
 	{
 	    
-		Songs::create($request->all());
+		Song::create($request->all());
 
-		return redirect()->route(config('quickadmin.route').'.songs.index');
+		return redirect('admin/song');
 	}
 
 	/**
@@ -61,7 +62,7 @@ class SongsController extends Controller {
 	 */
 	public function edit($id)
 	{
-		$songs = Songs::find($id);
+		$songs = Song::find($id);
 	    
 	    
 		return view('admin.songs.edit', compact('songs'));
@@ -75,13 +76,13 @@ class SongsController extends Controller {
 	 */
 	public function update($id, UpdateSongsRequest $request)
 	{
-		$songs = Songs::findOrFail($id);
+		$songs = Song::findOrFail($id);
 
         
 
 		$songs->update($request->all());
 
-		return redirect()->route(config('quickadmin.route').'.songs.index');
+		return redirect('admin/song');
 	}
 
 	/**
@@ -91,9 +92,9 @@ class SongsController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		Songs::destroy($id);
+		Song::destroy($id);
 
-		return redirect()->route(config('quickadmin.route').'.songs.index');
+		return redirect('admin/song');
 	}
 
     /**
@@ -106,12 +107,12 @@ class SongsController extends Controller {
     {
         if ($request->get('toDelete') != 'mass') {
             $toDelete = json_decode($request->get('toDelete'));
-            Songs::destroy($toDelete);
+            Song::destroy($toDelete);
         } else {
-            Songs::whereNotNull('id')->delete();
+            Song::whereNotNull('id')->delete();
         }
 
-        return redirect()->route(config('quickadmin.route').'.songs.index');
+        return redirect('admin/song');
     }
 
 }
