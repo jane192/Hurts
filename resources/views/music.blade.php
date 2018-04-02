@@ -3,18 +3,18 @@
 
 <section id="albom1">
     <ul class="albom11">
-        @foreach($music as $one)
-        <h2>{{$one->cabinet->name}}</h2>
-        <img src="{{asset('uploads/'.$one->picture)}}" class="ones" alt="hurts">
+        @foreach($cabinet as $one)
+        <h2>{{$one->name}}</h2>
 
+        <img src="{{asset('images/'.$one->picture)}}" class="ones" alt="hurts"> @foreach ($one->musics as $music)
         <li>
-            <p><a href="#">{{$one->name}}</a></p>
+            <p><a href="#">{{$music->name}}</a></p>
             <audio controls>   
-    <source src="{{asset('public/songs/'.$one->music)}}" type="audio/mpeg">
+    <source src="{{asset('song/'.$music->musicsong)}}" type="audio/mpeg">
     Тег audio не поддерживается вашим браузером. 
-    <a href="{{asset('public/songs/'.$one->music)}}">Скачайте музыку</a>
+    <a href="{{asset('song/'.$music->musicsong)}}">Скачайте музыку</a>
   </audio></li>
-        @endforeach
+        @endforeach @endforeach
     </ul>
 </section>
 @endsection

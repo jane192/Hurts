@@ -40,8 +40,12 @@
             <a href="{{asset('songs')}}">Тексты песен</a>
             <a href="{{asset('about')}}">О группе</a>
             <a href="{{asset('products')}}">Продукты</a>
+            <a href="#" id="google">Скачать с Google </a>
         </nav>
     </header>
+    <div id="empty">
+
+    </div>
 
     <!--    @include ('templates.bread')-->
     <main>
@@ -127,6 +131,26 @@
     @section('script')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+    <script>
+        $(function() {
+            $('#google').click(function() {
+                console.log('test');
+                $.ajax({
+                    url: 'parse/google',
+                    type: 'Post',
+                    data: 'id=0', //если есть данные
+                    beforeSend: function() {
+                        $('#empty').html('<img src="/loader.gif ">');
+
+                    },
+                    success: function(data) {
+                        $("#empty").html(data);
+                    }
+                })
+            })
+        });
+
+    </script>
     @show
 </body>
 

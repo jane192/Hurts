@@ -112,6 +112,8 @@ body {
 
 #albom1 li {
     list-style: none;
+    clear: both;
+
 
 }
 

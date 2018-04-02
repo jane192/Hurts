@@ -22,9 +22,8 @@ class Musics extends Model {
     protected $table    = 'musics';
     
     protected $fillable = [
-          'name',
-          'picture',
-          'music',
+          'name',          
+          'musicsong',
           'user_id',
           'cabinet_id',
           'status'

@@ -31,4 +31,5 @@ Route::get('/songs','SongController@getIndex');
 Route::get('/songs/{id}','SongController@getOne');
 Route::get('/music','MusicController@getIndex');
 Route::get('/products','ProductController@getIndex');
+Route::post('parse/google','AjaxController@postGoogle');
 Route::get('{id}', 'BaseController@getStatic');// Всегда ставится последним

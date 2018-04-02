@@ -15,7 +15,7 @@ class MusicController extends Controller
     public function __construct()
     {
         
-        $this->hurts = Musics::all();
+        //$this->hurts = Musics::all();
     }
 
     /**
@@ -26,8 +26,8 @@ class MusicController extends Controller
     public function getIndex()
 
     {
+       $cabinet=Cabinet::all();      
+        return view('music',compact('cabinet'));
         
-        $music=Musics::get();
-        return view('music',compact('music'));
     }
 }
