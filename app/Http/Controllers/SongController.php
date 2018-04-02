@@ -18,7 +18,7 @@ class SongController extends Controller
 
     {
         
-        $songs=Song::orderBy('id','DESC')->paginate(3);
+        $songs=Song::orderBy('name')->paginate(20);
         return view('songs',compact('songs'));
     }
    

@@ -122,7 +122,7 @@
             <a href="{{asset('/')}}">Главная</a>
             <a href="{{asset('video')}}">Видео</a>
             <a href="{{asset('music')}}">Песни</a>
-            <a href="#">Тексты песен</a>
+            <a href="{{asset('songs')}}">Тексты песен</a>
             <a href="{{asset('about')}}">О группе</a>
             <small>&copy; Copyright</small>
         </div>
