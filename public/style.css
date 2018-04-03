@@ -86,15 +86,16 @@ body {
 
 #albom2 {
     clear: both;
-    height: 550px;
+    height: 400px;
     padding-left: 30px;
 
 }
 
 #albom1 {
     clear: both;
-    height: 650px;
+    height: 150px;
     padding-left: 30px;
+    width: 200px;
 
 
 }
@@ -160,6 +161,7 @@ body {
     width: 250px;
     height: 250px;
     float: left;
+    margin-right: 20px;
 
 
 }
@@ -281,6 +283,7 @@ nav a:hover {
 .center h2 {
     color: white;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .center a {

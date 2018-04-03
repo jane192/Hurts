@@ -12,7 +12,8 @@
     @section('styles')
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style.css')}}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet"> @show
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/audioplayer/audioplayer.css" rel="stylesheet" /> @show
 </head>
 
 <body>
@@ -131,6 +132,8 @@
     @section('script')
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="audioplayer/audioplayer.js"></script>
+    <script src="audioplayer/jquery-2.1.1.min.js"></script>
     <script>
         $(function() {
             $('#google').click(function() {
@@ -151,6 +154,13 @@
         });
 
     </script>
+    <script>
+        $(function() {
+            $('audio').audioPlayer();
+        });
+
+    </script>
+
     @show
 </body>
 

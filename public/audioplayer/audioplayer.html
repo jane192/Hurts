@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Adaptive audioplayer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="audioplayer.css" />
+<script src="jquery.js"></script>
+<script src="audioplayer.js"></script>
+</head>
+<body>
+<br><br><br><br>
+<h1 style="text-align:center;">Adaptive audioplayer</h1>
+<br>
+<h2 style="text-align:center;font-size:300%;">aTmpl.ru</h2>
+<br><br><br>
+<audio src="http://atmpl.ru/music/rus/2014/delfin-you_are_my_joy.mp3" preload="auto"></audio>
+<script>
+$( function()
+{
+$( 'audio' ).audioPlayer();
+});
+</script>
+</body>
+</html>
