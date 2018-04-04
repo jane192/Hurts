@@ -77,6 +77,14 @@ body {
 
 }
 
+.foto {
+    width: 400px;
+}
+
+.texts {
+    color: white;
+}
+
 #albom3 {
     clear: both;
     height: 850px;

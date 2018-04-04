@@ -81,7 +81,7 @@
                                 {{$one->name}}
                             </p>
 
-                            <a href="#"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
+                            <a href="{{asset('news')}}"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
 
                         </ficaption>
                     </figure>
