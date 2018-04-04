@@ -4,19 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Maintext;
+use App\News;
 
 class BaseController extends Controller
 {
     public function getIndex()
     {
         $text = Maintext::where('url', 'index')->first();
-        return view('index', compact('text'));
+        $news=News::orderBy('id','DESC')->paginate(10);
+        return view('index', compact('text','news'));
 
     }
 
     public function getStatic($id = null)
     {
         $text = Maintext::where('url', $id)->first();
+        
         return view('static', compact('text'));
 
     }

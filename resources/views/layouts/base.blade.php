@@ -61,7 +61,8 @@
 
         <div class="search">
             <h2>Поиск</h2>
-            <form action=""><input type="text" placeholder="Поиск по сайту">
+            <form action="{{asset('search/')}}" method="get">
+                <input type="text" name='str' placeholder="Поиск по сайту">
                 <a href="#"><i class=" glyphicon glyphicon-search "></i></a>
             </form>
         </div>
@@ -81,7 +82,7 @@
                                 {{$one->name}}
                             </p>
 
-                            <a href="{{asset('news')}}"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
+                            <a href="{{asset('news/'.$one->id)}}"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
 
                         </ficaption>
                     </figure>

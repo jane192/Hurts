@@ -21,8 +21,15 @@ class NewsController extends Controller
     public function getIndex()
 
     {
-       $compnews=News::get();      
+       $compnews=News::orderBy('id','DESC')->paginate(5);      
         return view('news',compact('compnews'));
+        
+    }
+      public function getOne($id)
+
+    {
+       $onenews=News::find($id);      
+        return view('onenews',compact('onenews'));
         
     }
 }

@@ -30,4 +30,11 @@ class MusicController extends Controller
         return view('music',compact('cabinet'));
         
     }
+           public function getOne($id=null){
+      $music=Musics::find($id);
+      
+      return view('onemusic',compact('music'));
+   
+
+}
 }
