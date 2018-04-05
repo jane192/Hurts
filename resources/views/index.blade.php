@@ -9,7 +9,7 @@
         <li>
             <figure>
 
-                <img src="{{$one->picture}}" alt="hurts">
+                <img src="{{$one->picture}}" alt="hurts" class="photo2">
                 <ficaption> {{$one->name}}
                 </ficaption>
                 <a class="btn btn-warning" href="{{asset('news/'.$one->id)}}">Читать</a>

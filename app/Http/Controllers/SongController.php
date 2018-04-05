@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Song;
+use App\Musics;
 
 class SongController extends Controller
 {
@@ -23,9 +24,9 @@ class SongController extends Controller
     }
    
         public function getOne($id=null){
-      $r=Song::find($id);
+      $r=Musics::find($id);
       
-      return view('songs',compact('r'));
+      return view('onesong',compact('r'));
    
 
 }

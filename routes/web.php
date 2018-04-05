@@ -34,6 +34,6 @@ Route::get('/music/{id}','MusicController@getOne');
 Route::get('/news','NewsController@getIndex');
 Route::get('/news/{id}','NewsController@getOne');
 Route::get('/products','ProductController@getIndex');
-Route::get('/search','SearchController@getSearch');
+ Route::get('/search','SearchController@getSearch');
 Route::post('parse/google','AjaxController@postGoogle');
 Route::get('{id}', 'BaseController@getStatic');// Всегда ставится последним

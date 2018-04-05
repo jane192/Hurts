@@ -419,7 +419,7 @@ td {
 
 
 .mini_new {
-    height: 120px;
+    height: 150px;
     width: 220px;
 
 }
@@ -447,11 +447,14 @@ table {
     color: #005775;
 }
 
+
+
 .text {
     width: 210px;
     padding-left: 85px;
     position: relative;
     bottom: 85px;
+    overflow: hidden;
 }
 
 figure a {

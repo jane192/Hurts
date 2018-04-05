@@ -30,6 +30,7 @@ class HomeController extends Controller
         $hurts=$this->hurts;
         $products=Product::orderBy('id','DESC')->paginate(5);
         return view('home',compact('hurts','products'));
+        return view('home',compact('hurts','products'));
     }
     public function postIndex(ProductRequest $r){
         if (!empty($_FILES['picture1']['name'])){
