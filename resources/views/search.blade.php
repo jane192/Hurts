@@ -1,7 +1,7 @@
 @extends('layouts.base') @section('content') @foreach($music as $one)
 <div>
     <h2>{{$one->name}}</h2>
-    <a href="{{asset('onesong/'.$one->$id)}}"></a>
+    <a href="{{asset('onesong/'.$one->id)}}"></a>
 </div>
 
 @endforeach @foreach($song as $one)

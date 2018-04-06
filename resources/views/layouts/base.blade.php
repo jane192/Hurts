@@ -62,8 +62,8 @@
         <div class="search">
             <h2>Поиск</h2>
             <form action="{{asset('search/')}}" method="get">
-                <input type="text" name='str' placeholder="Поиск по сайту">
-                <a href="#"><i class=" glyphicon glyphicon-search "></i></a>
+                <input type="seach" name='str' placeholder="Поиск по сайту">
+                <button type="submit" class="btn btn-default button"><i class=" glyphicon glyphicon-search "></i></button>
             </form>
         </div>
 
