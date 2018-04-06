@@ -24,7 +24,7 @@ class SongController extends Controller
     }
    
         public function getOne($id=null){
-      $r=Musics::find($id);
+      $r=Song::find($id);
       
       return view('onesong',compact('r'));
    

@@ -1,17 +1,24 @@
-@extends('layouts.base') @section('content') @foreach($music as $one)
-<div>
-    <h2>{{$one->name}}</h2>
-    <a href="{{asset('onesong/'.$one->id)}}"></a>
+@extends('layouts.base') @section('content')
+<h2>Песня</h2>
+@foreach($music as $one)
+<div align="center">
+    <p><a href="{{asset('music/'.$one->id)}}">{{$one->name}}</a></p>
+
 </div>
 
-@endforeach @foreach($song as $one)
-<div>
-    <h2>{{$one->name}}</h2>
-    <a href="{{asset('song/'.$one->id)}}"></a>
+@endforeach
+<h2>Текст песни</h2>
+@foreach($song as $one)
+<div align="center">
+    <p><a href="{{asset('songs/'.$one->id)}}">{{$one->name}}</a></p>
+
 </div>
-@endforeach @foreach($news as $one)
-<div>
-    <h2>{{$one->name}}</h2>
-    <a href="{{asset('onenews/'.$one->id)}}"></a>
+
+@endforeach
+<h2>Новости</h2>
+@foreach($news as $one)
+<div align="center">
+    <p><a href="{{asset('news/'.$one->id)}}">{{$one->name}} </a></p>
+
 </div>
 @endforeach @endsection

@@ -29,6 +29,7 @@ Route::get('home/edit/{id}','HomeController@getEdit')->where('id','[0-9]');
 Route::post('home/edit/{id}','HomeController@postEdit')->where('id','[0-9]');
 Route::get('/songs','SongController@getIndex');
 Route::get('/songs/{id}','SongController@getOne');
+Route::get('doc/songs/{id}','DocController@getSong');
 Route::get('/music','MusicController@getIndex');
 Route::get('/music/{id}','MusicController@getOne');
 Route::get('/news','NewsController@getIndex');

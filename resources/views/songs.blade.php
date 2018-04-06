@@ -6,7 +6,9 @@
 
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     <? $i=1;?>
+
         @foreach($songs as $one)
+
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="heading{{$i}}">
                 <h4 class="panel-title">
@@ -17,6 +19,7 @@
             </div>
             <div id="collapse{{$i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$i}}">
                 <div class="panel-body">
+                    <div><a href="{{asset('doc/songs/'.$one->id)}}">Скачать в формате doc</a></div>
                     {!!$one->text_song!!}
                 </div>
             </div>

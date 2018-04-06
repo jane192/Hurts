@@ -187,6 +187,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         App\Providers\ViewServiceProvider::class,
+        App\Providers\EventProvider::class,
 
     ],
 

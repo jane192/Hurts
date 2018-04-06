@@ -41,7 +41,7 @@
             <a href="{{asset('songs')}}">Тексты песен</a>
             <a href="{{asset('about')}}">О группе</a>
             <a href="{{asset('products')}}">Продукты</a>
-            <a href="#" id="google">Скачать с Google </a>
+            <a href="#" id="google">Новости с Google </a>
         </nav>
     </header>
     <div id="empty">
