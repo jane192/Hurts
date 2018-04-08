@@ -39,4 +39,5 @@ class DocController extends Controller
         return Response::make($html,200,$headers);
             
     }
+    
 }
