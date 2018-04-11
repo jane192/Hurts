@@ -13,38 +13,88 @@
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
-    <link href="/audioplayer/audioplayer.css" rel="stylesheet"> @show
+    <link href="{{asset('/audioplayer/audioplayer.css')}}" rel="stylesheet">
+    <link href="{{asset('/audioplayer.css')}}" rel="stylesheet">
+    <link href="{{asset('player.css')}}" rel="stylesheet">
+    <link href="{{asset('/js/jPlayer-2.9.2/dist/skin/blue.monday/css/jplayer.blue.monday.min.css')}}" rel="stylesheet" type="text/css" /> @show @section('script')
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+    <!--<script src="{{asset('/audioplayer/audioplayer.js')}}"></script>
+
+<script>
+    $(function() {
+        $('#google').click(function() {
+
+            $.ajax({
+                url: 'parse/google',
+                type: 'Post',
+                data: 'id=0', //если есть данные
+                beforeSend: function() {
+                    $('#empty').html('<img src="/loader.gif ">');
+
+                },
+                success: function(data) {
+                    $("#empty").html(data);
+                }
+            })
+        })
+    });
+</script>
+<script>
+    $(function() {
+        $('audio').audioPlayer();
+    });
+</script>
+<script>
+    $('#ex20a').on('click', function(e) {
+        $('#ex20a')
+            .parent()
+            .find(' >.well')
+            .toggle()
+            .find('input')
+            .slider('relayout');
+        e.preventDefault();
+    });
+</script>-->
+
+    @show
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="logo col-lg-10">
+    <header class="header ">
+        <div class="logo col-lg-10 ">
 
-            <a href="{{asset('/')}}">
-                <h1 class="head">Hurts</h1>
+            <a href="{{asset( '/')}} ">
+                <h1 class="head ">Hurts</h1>
             </a>
 
             <p>The Hottest Heartbreakers in the World</p>
         </div>
-        <!--<div class="icons col-lg-2">
-    <a href="#"><img class="facebook" src="images/facebook.jpg" alt="facebook"></a>
-    <a href="#"><img class="twitter"src="images/twitter.png" alt="twitter"></a>
-    <a href="#"><img class="googleplus"src="images/googleplus.jpg" alt="googleplus"></a>
-    <a href="#"><img class="youtube" src="images/youtube.jpg" alt="youtube"></a>
-    <a href="#"><img class="vk" src="images/vk.jpg" alt="vk"></a>
+        <!--<div class="icons col-lg-2 ">
+    <a href="# "><img class="facebook " src="images/facebook.jpg " alt="facebook "></a>
+    <a href="# "><img class="twitter "src="images/twitter.png " alt="twitter "></a>
+    <a href="# "><img class="googleplus "src="images/googleplus.jpg " alt="googleplus "></a>
+    <a href="# "><img class="youtube " src="images/youtube.jpg " alt="youtube "></a>
+    <a href="# "><img class="vk " src="images/vk.jpg " alt="vk "></a>
 </div>-->
         <nav>
-            <a href="{{asset('/')}}" class="active">Главная</a>
-            <a href="{{asset('video')}}">Видео</a>
-            <a href="{{asset('music')}}">Песни</a>
-            <a href="{{asset('songs')}}">Тексты песен</a>
-            <a href="{{asset('about')}}">О группе</a>
-            <a href="{{asset('products')}}">Продукты</a>
-            <a href="#" id="google">Новости с Google </a>
+            <a href="{{asset( '/')}} " class="active ">Главная</a>
+            <a href="{{asset( 'video')}} ">Видео</a>
+            <a href="{{asset( 'music')}} ">Песни</a>
+            <a href="{{asset( 'songs')}} ">Тексты песен</a>
+            <a href="{{asset( 'about')}} ">О группе</a>
+            <a href="{{asset( 'products')}} ">Продукты</a>
+            <a href="# " id="google ">Новости с Google </a>
+
+
+
+
         </nav>
+        <!--<audio volume="0.0 " src="{{asset( 'song/03 Sandman.mp3')}} " autoplay> </audio>-->
     </header>
-    <div id="empty">
+    <div id="empty ">
 
     </div>
 
@@ -59,30 +109,30 @@
     </main>
     <div class="widgets col-lg-2 ">
 
-        <div class="search">
+        <div class="search ">
             <h2>Поиск</h2>
-            <form action="{{asset('search/')}}" method="get">
-                <input type="seach" name='str' placeholder="Поиск по сайту">
-                <button type="submit" class="btn btn-default button"><i class=" glyphicon glyphicon-search "></i></button>
+            <form action="{{asset( 'search/')}} " method="get ">
+                <input type="seach " name='str' placeholder="Поиск по сайту ">
+                <button type="submit " class="btn btn-default button "><i class=" glyphicon glyphicon-search "></i></button>
             </form>
         </div>
 
-        <div class="mini_news">
+        <div class="mini_news ">
             <h2>Новости</h2>
 
             <ul>
                 <li>
                     @foreach($compnews as $one)
-                    <figure class="mini_new">
+                    <figure class="mini_new ">
 
 
-                        <img src="{{asset($one['picture'])}}" alt="hurts">
+                        <img src="{{asset($one[ 'picture'])}} " alt="hurts ">
                         <ficaption>
-                            <p class="text">
+                            <p class="text ">
                                 {{$one->name}}
                             </p>
 
-                            <a href="{{asset('news/'.$one->id)}}"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
+                            <a href="{{asset( 'news/'.$one->id)}}"><i class=" glyphicon glyphicon-circle-arrow-right"></i></a>
 
                         </ficaption>
                     </figure>
@@ -130,39 +180,7 @@
         </div>
 
     </footer>
-    @section('script')
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-    <script src="/audioplayer/audioplayer.js"></script>
 
-    <script>
-        $(function() {
-            $('#google').click(function() {
-
-                $.ajax({
-                    url: 'parse/google',
-                    type: 'Post',
-                    data: 'id=0', //если есть данные
-                    beforeSend: function() {
-                        $('#empty').html('<img src="/loader.gif ">');
-
-                    },
-                    success: function(data) {
-                        $("#empty").html(data);
-                    }
-                })
-            })
-        });
-
-    </script>
-    <script>
-        $(function() {
-            $('audio').audioPlayer();
-        });
-
-    </script>
-
-    @show
 </body>
 
 </html>
