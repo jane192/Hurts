@@ -1,0 +1,43 @@
+#logo {
+    width: 720px;
+    padding: 10px;
+    margin: 10px;
+    background: olive;
+    border: solid 1px green;
+    border-radius: 6px;
+}
+
+#play,
+#mute {
+    padding: 2px 10px;
+    width: 65px;
+    border: solid 1px green;
+    background: blue;
+
+}
+
+#buttons {
+    float: left;
+    width: 130px;
+}
+
+#bar {
+    float: left;
+    width: 400px;
+    height: 16px;
+    margin: 2px;
+    padding: 2px;
+    background: grey;
+    border: solid 1px green;
+}
+
+#process {
+    width: 0;
+    height: 12px;
+    background: red;
+}
+
+#control {
+    width: 190px;
+    float: right;
+}

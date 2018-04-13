@@ -14,12 +14,12 @@
                 @foreach ($one->musics->all() as $music)
                 <li>
 
-                    <p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>
+                    <!--<p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>-->
 
 
                     <!--<audio src="{{asset('song/'.$music->musicsong)}}" preload="auto">Аудио не поддерживается</audio>-->
 
-                    <a href="{{asset('song/'.$music->musicsong)}}">Скачать</a>
+                    <!--<a href="{{asset('song/'.$music->musicsong)}}">Скачать</a>-->
                 </li>
                 <li>
                     <?php
