@@ -18,17 +18,17 @@ class SearchController extends Controller{
      *
      * @return \Illuminate\Http\Response
      */
-    public function getSearch()
+  public function getSearch()
 
-    {
-        if ($_GET['str']){
-            $str=$_GET['str'];
-       $music=Musics::where('name','LIKE','%'.$str.'%')->limit(10)->get();
+{
+    if ($_GET['str']){
+        $str=$_GET['str'];
+        $music=Musics::where('name','LIKE','%'.$str.'%')->limit(10)->get();
         $news=News::where('name','LIKE','%'.$str.'%')->limit(10)->get();
         $song=Song::where('name','LIKE','%'.$str.'%')->limit(10)->get();
-        
+
         return view('search',compact('music','news','song'));
-        }
-    } 
-    
+    }
+}
+
 }

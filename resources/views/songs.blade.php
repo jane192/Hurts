@@ -19,7 +19,7 @@
             </div>
             <div id="collapse{{$i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$i}}">
                 <div class="panel-body">
-                    <div><a href="{{asset('doc/songs/'.$one->id)}}">Скачать в формате doc</a></div>
+                    <div><a class="collapsed" href="{{asset('doc/songs/'.$one->id)}}">Скачать в формате doc</a></div>
                     {!!$one->text_song!!}
                 </div>
             </div>

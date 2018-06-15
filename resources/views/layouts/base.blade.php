@@ -13,50 +13,53 @@
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('style.css')}}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
-    <link href="{{asset('/audioplayer/audioplayer.css')}}" rel="stylesheet">
-    <link href="{{asset('/audioplayer.css')}}" rel="stylesheet">
+    <link href="{{asset('/audioplayer/audioplayer.css')}}" rel="stylesheet" />
     <link href="{{asset('player.css')}}" rel="stylesheet">
     <link href="{{asset('/js/jPlayer-2.9.2/dist/skin/blue.monday/css/jplayer.blue.monday.min.css')}}" rel="stylesheet" type="text/css" /> @show @section('script')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
-    <!--<script src="{{asset('/audioplayer/audioplayer.js')}}"></script>
+    <script src="{{asset('/audioplayer/audioplayer.js')}}"></script>
 
-<script>
-    $(function() {
-        $('#google').click(function() {
 
-            $.ajax({
-                url: 'parse/google',
-                type: 'Post',
-                data: 'id=0', //если есть данные
-                beforeSend: function() {
-                    $('#empty').html('<img src="/loader.gif ">');
+    <script>
+        $(function() {
+            $('#google').click(function() {
 
-                },
-                success: function(data) {
-                    $("#empty").html(data);
-                }
+                $.ajax({
+                    url: 'parse/google',
+                    type: 'Post',
+                    data: 'id=0', //если есть данные
+                    beforeSend: function() {
+                        $('#empty').html('<img src="public/loader.gif ">');
+
+                    },
+                    success: function(data) {
+                        $("#empty").html(data);
+                    }
+                })
             })
-        })
-    });
-</script>
-<script>
-    $(function() {
-        $('audio').audioPlayer();
-    });
-</script>
-<script>
-    $('#ex20a').on('click', function(e) {
-        $('#ex20a')
-            .parent()
-            .find(' >.well')
-            .toggle()
-            .find('input')
-            .slider('relayout');
-        e.preventDefault();
-    });
-</script>-->
+        });
+
+    </script>
+    <script>
+        $(function() {
+            $('audio').audioPlayer();
+        });
+
+    </script>
+    <script>
+        $('#ex20a').on('click', function(e) {
+            $('#ex20a')
+                .parent()
+                .find(' >.well')
+                .toggle()
+                .find('input')
+                .slider('relayout');
+            e.preventDefault();
+        });
+
+    </script>
 
     @show
 </head>
@@ -86,7 +89,7 @@
             <a href="{{asset( 'songs')}} ">Тексты песен</a>
             <a href="{{asset( 'about')}} ">О группе</a>
             <a href="{{asset( 'products')}} ">Продукты</a>
-            <a href="# " id="google ">Новости с Google </a>
+            <a href="#" id="google">Новости с Google </a>
 
 
 

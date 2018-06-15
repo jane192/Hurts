@@ -50,11 +50,7 @@ body {
 
 }
 
-.albom22 {
-    float: left;
-    margin-bottom: 50px;
 
-}
 
 .albom33 {
     float: left;
@@ -69,12 +65,29 @@ body {
 }
 
 #albom4 {
+    display: inline-block;
     clear: both;
     height: 650px;
-    padding-left: 30px;
+    width: 100%;
+    text-align: center;
+    padding: 0 150px 0 200px;
+    margin: 20px 0 100px 0;
 
 
+}
 
+.name {
+    text-align: center;
+}
+
+.collapsed {
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.panel-heading {
+    text-align: center;
 }
 
 .foto {
@@ -89,6 +102,14 @@ body {
     clear: both;
     height: 850px;
     padding-left: 30px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.albom33 {
+    width: 100%;
+    text-align: center;
 
 }
 
@@ -97,6 +118,23 @@ body {
     height: 400px;
     padding-left: 30px;
 
+
+}
+
+.albom22 {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 0 0;
+
+
+}
+
+.audioplayer {
+    margin: auto;
+}
+
+.albom22 li {
+    display: inline;
 }
 
 #albom1 {
@@ -288,6 +326,8 @@ nav a:hover {
 .centerr {
     text-align: center;
 }
+
+
 
 .center h2 {
     color: white;
@@ -572,15 +612,19 @@ p > .left {
 }
 
 @media all and (max-width: 768px) {
+    body{
+        width: 100%;
+    }
     .header {
         height: 250px;
+        width: 100%;
     }
     nav {
         width: 100%;
+        padding: 0;
+
     }
-    nav a {
-        padding: 5px;
-    }
+
     .center {
         overflow: hidden;
 
@@ -619,6 +663,36 @@ p > .left {
     .menu {
         display: block;
         width: 90%;
+    }
+    nav {
+        padding: 20px;
+        display: inline-block;
+        width: 100%;
+
+
+    }
+
+    nav a {
+        padding: 5px;
+
+
+    }
+    #albom4{
+        width: 100%;
+        padding:0;
+    }
+    .jp-jplayer{
+        margin-top: 20px;
+    }
+    .widgets{
+        display: none;
+    }
+    .albom44{
+        padding:0;
+    }
+    .video{
+        text-align: center;
+        padding: 0;
     }
 
 

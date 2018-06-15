@@ -12,7 +12,7 @@
         <tr>
             <td width="200">
                 <a href="#" class="link" data_id="{{asset($one['id']) }}"><img
-                            src="{{asset('public/load/'.$one->picture)}}" alt=" " width=200px></a>
+                            src="{{asset('load/'.$one->picture)}}" alt=" " width=200px></a>
 
             </td>
             <td><?=$one['name']; ?></td>

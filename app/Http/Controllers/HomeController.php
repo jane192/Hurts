@@ -17,6 +17,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
         $this->hurts = Cabinet::all();
+
     }
 
     /**
@@ -29,8 +30,9 @@ class HomeController extends Controller
     {
         $hurts=$this->hurts;
         $products=Product::orderBy('id','DESC')->paginate(5);
+        //dd($products->all());
         return view('home',compact('hurts','products'));
-        return view('home',compact('hurts','products'));
+
     }
     public function postIndex(ProductRequest $r){
         if (!empty($_FILES['picture1']['name'])){
@@ -44,6 +46,7 @@ class HomeController extends Controller
         }else{
             $pic='';
             $r['picture']='';
+
         }
 
         $r['user_id']=Auth::user()->id;
@@ -77,6 +80,7 @@ class HomeController extends Controller
     {
 
         $obj = Product::find($id);
+        dd($obj->all());
         $obj->name = $r['name'];
         $obj->price = $r['price'];
         $obj->status = $r['status'];

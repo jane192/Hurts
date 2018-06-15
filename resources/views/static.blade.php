@@ -1,6 +1,4 @@
-@extends('layouts.base')
-@section('content')
+@extends('layouts.base') @section('content')
 
-    <h3>{{$text->name}}</h3>
-    {!! $text->body !!}
-@endsection
+<h3 class="name">{{$text->name}}</h3>
+{!! $text->body !!} @endsection

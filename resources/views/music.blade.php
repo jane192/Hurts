@@ -4,22 +4,22 @@
 <script type="text/javascript" src="{{asset('/js/jPlayer-2.9.2/dist/add-on/jplayer.playlist.min.js')}}"></script>
 <? $a=0;?>
     @endsection @section('content') @foreach($cabinet as $one)
-    <section id="albom2">
+    <section id="albom4">
         <h2>{{$one->name}}</h2>
 
 
         <img src="{{asset('images/'.$one->picture)}}" class="ones" alt="hurts">
-        <ul class="albom22">
+        <ul class="albom44">
             <?$arr=[];?>
                 @foreach ($one->musics->all() as $music)
                 <li>
 
-                    <p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>
+                    <!-- <p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>-->
 
 
                     <!--<audio src="{{asset('song/'.$music->musicsong)}}" preload="auto">Аудио не поддерживается</audio>-->
 
-                    <a href="{{asset('song/'.$music->musicsong)}}">Скачать</a>
+                    <!--<a href="{{asset('song/'.$music->musicsong)}}">Скачать</a>-->
                 </li>
                 <li>
                     <?php
