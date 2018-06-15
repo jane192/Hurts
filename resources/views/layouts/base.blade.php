@@ -11,16 +11,33 @@
     <title>{{ config('app.name', 'app.title') }}</title>
     @section('styles')
     <link href="{{asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('style.css')}}" rel="stylesheet">
+    <link href="{{asset('public/style.css')}}" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+<<<<<<< HEAD
     <link href="{{asset('/audioplayer/audioplayer.css')}}" rel="stylesheet" />
     <link href="{{asset('player.css')}}" rel="stylesheet">
+=======
+
+    <link href="{{asset('audioplayer/audioplayer.css')}}" rel="stylesheet">
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
     <link href="{{asset('/js/jPlayer-2.9.2/dist/skin/blue.monday/css/jplayer.blue.monday.min.css')}}" rel="stylesheet" type="text/css" /> @show @section('script')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+<<<<<<< HEAD
     <script src="{{asset('/audioplayer/audioplayer.js')}}"></script>
 
+=======
+    <script src="{{asset('public/audioplayer/jquery.js')}}"></script>
+    <script src="{{asset('public/audioplayer/audioplayer.js')}}"></script>
+    <script>
+        $(function() {
+            $('audio').audioPlayer();
+        });
+
+    </script>
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
 
     <script>
         $(function() {
@@ -31,7 +48,11 @@
                     type: 'Post',
                     data: 'id=0', //если есть данные
                     beforeSend: function() {
+<<<<<<< HEAD
                         $('#empty').html('<img src="public/loader.gif ">');
+=======
+                        $('#empty').html('<img src="/loader.gif ">');
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
 
                     },
                     success: function(data) {
@@ -42,6 +63,10 @@
         });
 
     </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
     <script>
         $(function() {
             $('audio').audioPlayer();
@@ -60,6 +85,10 @@
         });
 
     </script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
 
     @show
 </head>
@@ -89,7 +118,11 @@
             <a href="{{asset( 'songs')}} ">Тексты песен</a>
             <a href="{{asset( 'about')}} ">О группе</a>
             <a href="{{asset( 'products')}} ">Продукты</a>
+<<<<<<< HEAD
             <a href="#" id="google">Новости с Google </a>
+=======
+            <a href="# " id="google">Новости с Google </a>
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
 
 
 

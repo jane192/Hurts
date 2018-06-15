@@ -14,7 +14,11 @@
                 @foreach ($one->musics->all() as $music)
                 <li>
 
+<<<<<<< HEAD
                     <!-- <p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>-->
+=======
+                    <!--<p><a href="{{asset('songs/'.$music->id)}}">{{$music->name}}</a></p>-->
+>>>>>>> a64a7df5dfdae7ba40d3a267ff28f6a76d3e0e9e
 
 
                     <!--<audio src="{{asset('song/'.$music->musicsong)}}" preload="auto">Аудио не поддерживается</audio>-->
